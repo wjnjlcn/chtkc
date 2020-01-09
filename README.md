@@ -18,17 +18,14 @@ cmake ..
 make
 ```
 
-The `build` directory will contain two versions of CHTKC binary files -- the normal version `chtkc` and the optimized version `chtkco`.
+The `build` directory will contain two versions of CHTKC binary files:
 
+* `chtkc`: normal version.
+* `chtkco`: optimized version.
 
-## Note
+## Documentation
 
-Under small RAM usage, the optimized version has better performance, because it can allocate more nodes than the normal version.
-
-However, because the optimized version can only use up to 4G (4294967295) nodes, when the available memory is big enough, the normal version may instead allocate more nodes than the optimized the version.
-
-For example, when counting 28-mers, if the RAM usage is over 150 GB, please consider using the normal version.
-
+The documentation of CHTKC can be found [here][2].
 
 ## License
 
@@ -36,3 +33,4 @@ CHTKC is distributed under GNU GPL 3 license.
 
 
 [1]: https://github.com/wjnjlcn/chtkc/releases
+[2]: https://chtkc-doc.readthedocs.io/en/latest/
