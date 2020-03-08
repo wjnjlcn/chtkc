@@ -32,6 +32,7 @@ set(SRC
         src/kmer_counter.h src/kmer_counter.c
         src/header.h src/header.c
         src/histo.h src/histo.c
+        src/dump.c src/dump.h
         src/main.c)
 
 add_executable(chtkc ${SRC})

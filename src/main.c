@@ -25,14 +25,15 @@
 
 #include "kmer_counter.h"
 #include "histo.h"
+#include "dump.h"
 #include "logging.h"
 #include "assert.h"
 
-const char* argp_program_version = "CHTKC 1.0.0";
+const char* argp_program_version = "CHTKC 1.0.1";
 
 static inline void KC__print_usage(const char* program_name) {
     printf("Usage: %s <CMD> [OPTION...] ARGS...\n"
-           "  <CMD> is one of: count, histo\n"
+           "  <CMD> is one of: count, histo, dump\n"
            "\n"
            "  -?, --help                 Give this help list\n"
            "  -V, --version              Print program version\n",
@@ -78,6 +79,9 @@ int main(int argc, char** argv) {
 
     } else if (strcmp(argv[0], "histo") == 0) {
         KC__histo(argc, argv);
+
+    } else if (strcmp(argv[0], "dump") == 0) {
+        KC__dump(argc, argv);
 
     } else if ((strcmp(argv[0], "-?") == 0) || (strcmp(argv[0], "--help") == 0)) {
         KC__print_usage(program_name);
