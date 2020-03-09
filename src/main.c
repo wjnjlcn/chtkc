@@ -29,7 +29,7 @@
 #include "logging.h"
 #include "assert.h"
 
-const char* argp_program_version = "CHTKC 1.0.1";
+const char* argp_program_version = "CHTKC 1.0.2";
 
 static inline void KC__print_usage(const char* program_name) {
     printf("Usage: %s <CMD> [OPTION...] ARGS...\n"
