@@ -19,6 +19,11 @@
 
 
 #include <pthread.h>
+
+#ifdef __APPLE__
+#include "pthread_barrier.h"
+#endif // __APPLE__
+
 #include <stdlib.h>
 #include <string.h>
 #include "hash_map.h"
